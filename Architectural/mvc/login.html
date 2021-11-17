@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="../assets/css/mocha.css">
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h2>Вход</h2>
+            <div id="login"></div>
+        </div>
+        <div id="debugMessage"></div>
+
+    
+        <div id="mocha"></div>
+        <script src="../assets/js/chai.js"></script>
+        <script src="../assets/js/mocha.js"></script>
+
+
+
+        <script class="mocha-init">
+
+            const pub = (function(context) {
+                // 'use strict';
+                // const url = "{$API}";
+                
+                // var fetchData = function(query, dataURL, type) {
+                //     return $.ajax({
+                //         data: query,
+                //         dataType: 'json',
+                //         type: type,
+                //         url: dataURL
+                //     });
+                // }
+                
+                // var getUrl = function() {
+                //     return url;
+                // }
+                
+                
+                // return {
+                //     url: getUrl,
+                //     fetchData: fetchData
+                // };
+            })();
+
+            //тестрование интерфейса
+            mocha.setup('bdd');
+            mocha.checkLeaks(false);
+            //mocha.growl();
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="debug.js"></script>
+        <script type="text/javascript" src="Producer.js"></script>
+        <script type="text/javascript" src="Province.js"></script>
+        <script type="text/javascript" src="system.js"></script>
+        <script type="text/javascript" src="login\model.js"></script>
+        <script type="text/javascript" src="login\view.js"></script>
+        <script type="text/javascript" src="login\ctrl.js"></script>
+        <script type="text/javascript" src="login.js"></script>
+        <script src="debug/test.js"></script>
+        <script class="mocha-exec">
+            mocha.globals(['jQuery', '_', '*']);
+            mocha.cleanReferencesAfterRun(false);
+            mocha.run();
+        </script>
+    </body>
+
+    
+</html>

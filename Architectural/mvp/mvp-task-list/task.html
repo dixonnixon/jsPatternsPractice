@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<script src="models.js"></script>
+	<script src="taskPresenter.js"></script>
+	<script src="taskView.js"></script>
+</head>
+<body>
+	
+	<script>
+	
+		var model 	= new TaskModel("Hello world!");
+		var task 	= new TaskPresenter(new TaskView());
+		
+		model.setText("Hello world!");
+		task.setModel(model);
+		
+		$("body").append(task.getView().getHtml());
+		
+	
+	</script>
+	
+</body>
+</html>

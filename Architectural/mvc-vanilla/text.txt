@@ -1,0 +1,5 @@
+Model - container for state, performs business logic
+Controller - mediator between model and view, store non-domain app state
+
+View - HTML + View class that encapsulates relevant DOM selectors
+
